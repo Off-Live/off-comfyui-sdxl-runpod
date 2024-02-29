@@ -1,0 +1,18 @@
+services:
+
+  comfy:
+    build: .
+    image: comfy-base-sdxl-wf
+    # image: offdev/comfy-base-torch2.1.2-cuda11.8
+    ports:
+      - "8188:8188"
+      - "8888:8888"
+    volumes:
+      - ./models/:/comfy-models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
