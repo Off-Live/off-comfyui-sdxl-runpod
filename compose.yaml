@@ -8,7 +8,7 @@ services:
       - "8188:8188"
       - "8888:8888"
     volumes:
-      - ./models/:/comfy-models
+      - ./models/:/workspace/models
     deploy:
       resources:
         reservations:

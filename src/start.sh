@@ -14,19 +14,11 @@ aws configure set aws_access_key_id ${AWS_ACCESS_KEY_ID} \
 
 mkdir -p /workspace
 
-echo 'models are syncing'
-
-ln -s -f /comfy-models/* /root/ComfyUI/models/
-
-
-#ln -s -f /workspace/comfy-models/input/* /root/ComfyUI/input/
-#ln -s -f /workspace/comfy-models/wildcards/* /root/ComfyUI/custom_nodes/ComfyUI-Impact-Pack/custom_wildcards/
-#ln -s -f /workspace/comfy-models/ipadapter/* /root/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/models/
-
+rm -rf /workspace/ComfyUI
+rm -rf /root/ComfyUI/models/*
+ln -s -f /workspace/models/* /root/ComfyUI/models/
 ln -s /root/ComfyUI/ /workspace/ComfyUI
 
 start_jupyter
-
-
 
 sleep infinity
