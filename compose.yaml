@@ -8,7 +8,32 @@ services:
       - "8188:8188"
       - "8888:8888"
     volumes:
-      - ./models/:/workspace/models
+      - ../models-sdxl/checkpoints:/root/ComfyUI/models/checkpoints
+      - ../models-sdxl/clip_vision:/root/ComfyUI/models/clip_vision
+      - ../models-sdxl/configs:/root/ComfyUI/models/configs
+      - ../models-sdxl/controlnet:/root/ComfyUI/models/controlnet
+      - ../models-sdxl/diffusers:/root/ComfyUI/models/diffusers
+      - ../models-sdxl/embeddings:/root/ComfyUI/models/embeddings
+      - ../models-sdxl/face_restore:/root/ComfyUI/models/face_restore
+      - ../models-sdxl/facedetection:/root/ComfyUI/models/facedetection
+      - ../models-sdxl/facerestore_models:/root/ComfyUI/models/facerestore_models
+      - ../models-sdxl/gligen:/root/ComfyUI/models/gligen
+      - ../models-sdxl/grounding-dino:/root/ComfyUI/models/grounding-dino
+      - ../models-sdxl/hypernetworks:/root/ComfyUI/models/hypernetworks
+      - ../models-sdxl/insightface:/root/ComfyUI/models/insightface
+      - ../models-sdxl/instantid:/root/ComfyUI/models/instantid
+      - ../models-sdxl/ipadapter:/root/ComfyUI/models/ipadapter
+      - ../models-sdxl/loras:/root/ComfyUI/models/loras
+      - ../models-sdxl/mmdets:/root/ComfyUI/models/mmdets
+      - ../models-sdxl/photomaker:/root/ComfyUI/models/photomaker
+      - ../models-sdxl/rembg:/root/ComfyUI/models/rembg
+      - ../models-sdxl/sams:/root/ComfyUI/models/sams
+      - ../models-sdxl/style_models:/root/ComfyUI/models/style_models
+      - ../models-sdxl/ultralytics:/root/ComfyUI/models/ultralytics
+      - ../models-sdxl/unet:/root/ComfyUI/models/unet
+      - ../models-sdxl/upscale_models:/root/ComfyUI/models/upscale_models
+      - ../models-sdxl/vae:/root/ComfyUI/models/vae
+      - ../models-sdxl/vae_approx:/root/ComfyUI/models/vae_approx
     deploy:
       resources:
         reservations:
