@@ -45,15 +45,4 @@ RUN pip install insightface
 
 RUN cd /root/ComfyUI && python main.py --quick-test-for-ci --cpu
 
-RUN pip install --upgrade --no-cache-dir jupyterlab ipywidgets jupyter-archive jupyter_contrib_nbextensions
-RUN pip install notebook==6.5.5
-RUN jupyter contrib nbextension install --user && \
-    jupyter nbextension enable --py widgetsnbextension
-
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-RUN unzip awscliv2.zip && ./aws/install
-
-ADD src /
-RUN chmod +x /start.sh
-
-CMD /start.sh
+CMD [ "python", "/root/ComfyUI/main.py", "--listen", "--gpu-only" ]
