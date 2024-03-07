@@ -32,7 +32,8 @@ RUN cd /root/ComfyUI/custom_nodes \
     && git clone https://github.com/cubiq/ComfyUI_essentials.git \
     && git clone https://github.com/ltdrdata/ComfyUI-Manager \
     && git clone https://github.com/ltdrdata/ComfyUI-Inspire-Pack \
-    && git clone https://github.com/cubiq/ComfyUI_InstantID 
+    && git clone https://github.com/cubiq/ComfyUI_InstantID \
+    && git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts
     
 
 # update custom nodes
